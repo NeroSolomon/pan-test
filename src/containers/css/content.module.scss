@@ -5,7 +5,8 @@ $border-color: #d2d2d2;
   border-bottom: 1px solid $border-color;
 }
 
-.article__auther-pic {
+.article__auther-pic,
+.comment__auther-pic {
   width: 32px;
   height: 32px;
   float: left;
@@ -16,9 +17,29 @@ $border-color: #d2d2d2;
   background-size: cover;
 }
 
-.article__auther-name {
+.article__auther-name,
+.comment__auther-name {
   float: left;
   margin-left: 10px;
   font-weight: bold;
   line-height: 32px;
+}
+
+.comment__container {
+  padding: 16px 16px 0 16px;
+}
+
+.comment__detail {
+  margin-left: 42px;
+  clear: left;
+}
+
+.comment__detail-info {
+  font-size: 12px;
+  color: #8e8e8e;
+
+  & > span {
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
