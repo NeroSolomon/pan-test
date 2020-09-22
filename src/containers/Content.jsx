@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "antd";
 import img from "./img/cute-dog.jpg";
+import style from "./css/content.module.scss";
 
 function Content() {
   return (
@@ -17,10 +18,12 @@ function Content() {
           >
             <img src={img} alt="内容" />
           </div>
-          <div
-            className="item--float-left"
-            style={{ width: "335px", maxWidth: "35%" }}
-          ></div>
+          <div className="item--float-left" style={{ width: "335px" }}>
+            <div className={style["article__auther"] + " item--clear-float"}>
+              <div className={style["article__auther-pic"]} />
+              <div className={style["article__auther-name"]}>Animals Lover</div>
+            </div>
+          </div>
         </Card>
       </div>
     </div>

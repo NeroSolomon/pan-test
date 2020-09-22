@@ -16,8 +16,9 @@
 }
 
 .item--clear-float {
-  &::before {
+  &::after {
     content: "";
+    display: block;
     clear: both;
   }
 }

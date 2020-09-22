@@ -1,0 +1,24 @@
+$border-color: #d2d2d2;
+
+.article__auther {
+  padding: 16px;
+  border-bottom: 1px solid $border-color;
+}
+
+.article__auther-pic {
+  width: 32px;
+  height: 32px;
+  float: left;
+  border-radius: 50%;
+  border: 1px solid $border-color;
+  background: url("../img/original-poster-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article__auther-name {
+  float: left;
+  margin-left: 10px;
+  font-weight: bold;
+  line-height: 32px;
+}
