@@ -1,0 +1,27 @@
+@import "~antd/dist/antd.css";
+.App {
+  min-height: 100vh;
+  background-color: #282c34;
+  position: relative;
+}
+
+.App-content {
+  width: 935px;
+  height: 600px;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item--clear-float {
+  &::before {
+    content: "";
+    clear: both;
+  }
+}
+
+.item--float-left {
+  float: left;
+}
