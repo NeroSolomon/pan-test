@@ -26,7 +26,24 @@ $border-color: #d2d2d2;
 }
 
 .comment__container {
+  position: relative;
   padding: 16px 16px 0 16px;
+}
+
+.comment__like {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  width: 12px;
+  height: 12px;
+  background: url("../img/love.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+  &.comment__like--active {
+    background-image: url("../img/love_fill.png");
+  }
 }
 
 .comment__detail {
@@ -38,7 +55,7 @@ $border-color: #d2d2d2;
   font-size: 12px;
   color: #8e8e8e;
 
-  & > span {
+  & > div:first-child > span {
     display: inline-block;
     margin-right: 10px;
   }
