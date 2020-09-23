@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "antd";
 import style from "../containers/css/content.module.scss";
+import Comment from "./Comment.jsx";
 
 function ArticleComment(props) {
   const [isActive, setIsActive] = useState(false);
@@ -53,22 +54,7 @@ function ArticleComment(props) {
           </div>
         </div>
       </div>
-      <div
-        className={
-          style["comment__container"] + " " + style["item--clear-float"]
-        }
-      >
-        <div className={style["comment__auther-pic"]} />
-        <div className={style["comment__auther-name"]}>Animals Lover</div>
-        <div
-          className={
-            style["comment__like"] +
-            " " +
-            (isActive ? style["comment__like--active"] : "")
-          }
-          onClick={toggleLike}
-        ></div>
-      </div>
+      {showComment ? <Comment /> : null}
     </div>
   );
 }
