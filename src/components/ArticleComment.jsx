@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "antd";
 import style from "../containers/css/content.module.scss";
 
 function ArticleComment(props) {
@@ -41,11 +42,14 @@ function ArticleComment(props) {
               回复
             </span>
           </div>
-          <div
-            style={{ cursor: "pointer", fontWeight: "bold", marginTop: "10px" }}
-            onClick={toggleComment}
-          >
-            {showComment ? "隐藏回复" : "查看回复（12）"}
+          <div style={{ fontWeight: "bold", marginTop: "10px" }}>
+            <Button
+              className={style["comment__detail-btn"]}
+              type="link"
+              onClick={toggleComment}
+            >
+              {showComment ? "隐藏回复" : "查看回复（12）"}
+            </Button>
           </div>
         </div>
       </div>
