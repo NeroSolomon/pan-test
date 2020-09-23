@@ -6,8 +6,14 @@ import Comment from "./Comment.jsx";
 function ArticleComment(props) {
   const [isActive, setIsActive] = useState(false);
   const [showComment, setShowComment] = useState(false);
+  const [like, setLike] = useState(200);
 
   function toggleLike(props) {
+    if (isActive) {
+      setLike(like - 1);
+    } else {
+      setLike(like + 1);
+    }
     setIsActive(!isActive);
   }
 
@@ -35,7 +41,7 @@ function ArticleComment(props) {
         <div className={style["comment__detail-info"]}>
           <div>
             <span>6 天</span>
-            <span>200 次赞</span>
+            <span>{like} 次赞</span>
             <span
               style={{ cursor: "pointer", fontWeight: "bold" }}
               onClick={onReply}

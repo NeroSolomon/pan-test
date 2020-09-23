@@ -73,3 +73,15 @@ $border-color: #d2d2d2;
   font-size: 12px !important;
   color: #8e8e8e !important;
 }
+
+.editor__send-btn {
+  position: absolute;
+  font-size: 14px;
+  color: #0095f6;
+  top: 50%;
+  right: 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+}
