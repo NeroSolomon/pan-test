@@ -4,6 +4,7 @@ import img from "./img/cute-dog.jpg";
 import style from "./css/content.module.scss";
 import ArticleAuther from "../components/ArticleAuther.jsx";
 import ArticleComment from "../components/ArticleComment.jsx";
+import CommentEditor from "../components/CommentEditor.jsx";
 
 function Content() {
   return (
@@ -22,12 +23,10 @@ function Content() {
             style={{ width: "335px", overflow: "hidden" }}
           >
             <ArticleAuther />
-            <div
-              className={style["article__comment"]}
-              style={{ width: "340px" }}
-            >
+            <div className={style["article__comment"]}>
               <ArticleComment />
             </div>
+            <CommentEditor />
           </div>
         </Card>
       </div>

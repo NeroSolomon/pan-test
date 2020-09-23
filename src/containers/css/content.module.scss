@@ -25,6 +25,13 @@ $border-color: #d2d2d2;
   line-height: 32px;
 }
 
+.article__comment {
+  width: 340px;
+  height: 435px;
+  overflow: hidden;
+  border-bottom: 1px solid $border-color;
+}
+
 .comment__container {
   position: relative;
   padding: 16px 16px 0 16px;
