@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../containers/css/content.module.scss";
 
 function ArticleComment() {
+  const [isActive, setIsActive] = useState(false);
+  function toggleLike() {
+    setIsActive(!isActive);
+  }
+
   return (
     <div className={style["comment__container"]}>
       <div className={style["comment__auther-pic"]} />
       <div className={style["comment__auther-name"]}>Animals Lover</div>
       <div
         className={
-          style["comment__like"] + " " + style["comment__like--active"]
+          style["comment__like"] +
+          " " +
+          (isActive ? style["comment__like--active"] : "")
         }
+        onClick={toggleLike}
       ></div>
       <div className={style["comment__detail"]}>
         <div className={style["comment__detail-info"]}>
