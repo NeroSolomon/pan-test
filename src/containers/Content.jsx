@@ -1,12 +1,18 @@
-import React from "react";
-import { Card } from "antd";
+import React, { useRef } from "react";
+import { Card, Input } from "antd";
 import img from "./img/cute-dog.jpg";
 import style from "./css/content.module.scss";
 import ArticleAuther from "../components/ArticleAuther.jsx";
 import ArticleComment from "../components/ArticleComment.jsx";
-import CommentEditor from "../components/CommentEditor.jsx";
+const { TextArea } = Input;
 
 function Content() {
+  const inputEl = useRef(null);
+
+  function onReply() {
+    inputEl.current.focus();
+  }
+
   return (
     <div className="App-content">
       <div className="site-card-border-less-wrapper">
@@ -24,9 +30,16 @@ function Content() {
           >
             <ArticleAuther />
             <div className={style["article__comment"]}>
-              <ArticleComment />
+              <ArticleComment onReply={onReply} />
             </div>
-            <CommentEditor />
+            <div style={{ height: "99px", position: "relative" }}>
+              <TextArea
+                ref={inputEl}
+                bordered={false}
+                style={{ height: "100%", resize: "none" }}
+              />
+              <span className={style["editor__send-btn"]}>发布</span>
+            </div>
           </div>
         </Card>
       </div>
